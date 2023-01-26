@@ -1,2 +1,0 @@
-# taylorclaydev
-Personal Site
