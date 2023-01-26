@@ -21,7 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build and export
+      - name: Build
+        run: npm run build
+
+      - name: Export
         run: npm run export
 
       - name: Deploy
