@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && gh-pages -d .next"
+    "deploy": "npm run build && gh-pages -d dist -t true"
   },
   "dependencies": {
     "@compiled/react": "^0.6.7",
