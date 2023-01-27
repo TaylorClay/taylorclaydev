@@ -29,7 +29,10 @@ jobs:
         run: npm run export
 
       - name: Fix out
-        run: touch out/.nojekyll
+        run: touch ./out/.nojekyll
+
+      - name: Echo site
+        run: echo 'taylorclay.dev' > ./out/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
