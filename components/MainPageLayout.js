@@ -9,7 +9,6 @@ import A11yContext from '../context/A11yContext';
 const Footer = styled.footer`
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,10 +66,7 @@ export default function MainPageLayout({
           {children}
         </main>
 
-        <Footer>
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel' className='logo' />
-        </Footer>
+        <Footer />
       </A11yContext.Provider>
     </div>
   );
