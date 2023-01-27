@@ -9,7 +9,6 @@ import A11yContext from '../context/A11yContext';
 const Footer = styled.footer`
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,27 +49,23 @@ export default function MainPageLayout({
               <NavItem pageName={'About'} {...props} />
               <NavItem href={'blog'} pageName={'Blog'} {...props} disabled />
               <NavItem href={'contact'} pageName={'Contact'} {...props} />
-              <NavItem href={'resources'} pageName={'Resources'} {...props} />
+              <NavItem href={'resources'} pageName={'Resources'} {...props} disabled />
               <NavItem href={'resume'} pageName={'Resume'} {...props} />
             </>
           )}
         </NavBar>
 
         <main css={{
-          margin: '50px 5vw 0',
+          margin: '100px 5vw 0',
           display: 'flex',
           flex: '1',
           flexDirection: 'column',
-          justifyContent: 'center',
           alignContent: 'center',
         }}>
           {children}
         </main>
 
-        <Footer>
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel' className='logo' />
-        </Footer>
+        <Footer />
       </A11yContext.Provider>
     </div>
   );
