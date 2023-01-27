@@ -7,39 +7,7 @@ import MainPageLayout from '../components/MainPageLayout';
 const ResumeWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  
-  /* Extra small devices */
-  @media (max-width: 600px) {
-    //width: 100vw;
-  }
-
-  /* Small devices */
-  @media (min-width: 600px) {
-    //width: 100vw;
-  }
-
-  /* Medium devices */
-  @media (min-width: 768px) {
-    //width: 95vw;
-  }
-
-  /* Large devices */
-  @media (min-width: 992px) {
-    //width: 75vw;
-  }
-
-  /* Extra large devices */
-  @media (min-width: 1250px) {
-    //width: 60vw;
-  }
-
-  @media (min-width: 1400px) {
-    //width: 50vw;
-  }
-
-  @media (min-width: 1600px) {
-    //width: 45vw;
-  }
+  height: 100%;
 `;
 
 export default function Resume() {
@@ -48,7 +16,7 @@ export default function Resume() {
 
   useEffect(() => {
     // Give the Google Doc iFrame 200ms to load before showing a plain link
-    setTimeout(() => setShowFallback(true), 200)
+    setTimeout(() => setShowFallback(true), 1000)
   }, [])
 
   return (
@@ -60,21 +28,23 @@ export default function Resume() {
           block
           css={{
             display: !resumeVisible && showFallback ? 'block' : 'none',
+            fontSize: '2rem',
           }}
         >
           Resume
         </Link>
         <div css={{
           visibility: resumeVisible ? 'block' : 'hidden',
+          maxWidth: resumeVisible ? "950px" : '0',
+          height: '90%',
         }}>
           <iframe
             src="https://docs.google.com/document/d/e/2PACX-1vRWx-mmx3AcIrEa3s0imdcs9_31JORqMvY9jgWTf36augRqABWYeV1c0pSk21BYewM_eoOOB7SVQ7CQ/pub?embedded=true"
             height={resumeVisible ? "100%" : '0'}
             width={resumeVisible ? "100%" : '0'}
-            sandbox=""
             title="Taylor Clay\'s Resume"
             loading="eager"
-            onLoad={() => setResumeVisible(true)}
+            onLoad={() => setResumeVisible(!navigator.userAgentData.mobile)}
           />
         </div>
       </ResumeWrapper>

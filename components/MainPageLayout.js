@@ -56,11 +56,10 @@ export default function MainPageLayout({
         </NavBar>
 
         <main css={{
-          margin: '50px 5vw 0',
+          margin: '100px 5vw 0',
           display: 'flex',
           flex: '1',
           flexDirection: 'column',
-          justifyContent: 'center',
           alignContent: 'center',
         }}>
           {children}

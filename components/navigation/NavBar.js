@@ -36,7 +36,6 @@ const A11ySwitcher = styled.button`
 
 const Header = styled.header`
   min-width: 100vw;
-  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -62,6 +61,10 @@ const Header = styled.header`
     100% {
       background-position: 0 50%;
     }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 `;
 
