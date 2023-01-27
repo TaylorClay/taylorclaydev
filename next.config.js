@@ -7,5 +7,6 @@ module.exports = {
 
     return config;
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? './' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/taylorclaydev' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/taylorclaydev/' : '',
 };
