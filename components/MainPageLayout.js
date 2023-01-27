@@ -49,7 +49,7 @@ export default function MainPageLayout({
               <NavItem pageName={'About'} {...props} />
               <NavItem href={'blog'} pageName={'Blog'} {...props} disabled />
               <NavItem href={'contact'} pageName={'Contact'} {...props} />
-              <NavItem href={'resources'} pageName={'Resources'} {...props} />
+              <NavItem href={'resources'} pageName={'Resources'} {...props} disabled />
               <NavItem href={'resume'} pageName={'Resume'} {...props} />
             </>
           )}
