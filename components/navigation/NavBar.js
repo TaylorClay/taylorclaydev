@@ -80,7 +80,7 @@ export default function NavBar({ children, toggleA11y }) {
     import('boxicons');
   }, []);
 
-  const onThemeSwitch = useCallback(() => setTheme((prevTheme) => prevTheme === 'dark' ? 'light' : 'dark'), [])
+  const onThemeSwitch = useCallback(() => setTheme(isDark ? 'light' : 'dark'), [isDark])
   const onToggleA11y = useCallback(() => toggleA11y((prevA11y) => !prevA11y), [])
 
   return (
