@@ -1,59 +1,55 @@
 import MainPageLayout from '../components/MainPageLayout';
+import useTheme from '@nextui-org/react/use-theme';
+import Link from '@nextui-org/react/link';
+import Text from '@nextui-org/react/text';
+
+const LinkListItem = ({ href, text}) => {
+  const { isDark } = useTheme();
+  return (
+    <li>
+      <Link block color={isDark ? "success" : "primary"} href={href}>
+        {text}
+      </Link>
+    </li>
+  );
+}
 
 export default function Resources() {
   // TODO: Figure out how to do thumbnails / preview links
   return (
     <MainPageLayout title={'Resources'}>
-      <h1>Resources</h1>
-
-      <h2>Blogs</h2>
-      <ul>
-        <li>I'm not passionate about writing code; but, I am passionate about making the web faster and creating delightful user experiences, which happens to involve writing code</li>
-        <li>I'm a pretend extrovert at work</li>
-        <li>I have full stack experience, but much prefer working on the front end (namely JavaScript with React)</li>
-        <li>I'm proactive in knowledge sharing via both verbal and written communication</li>
-        <li></li>
-      </ul>
+      <h1 h1>Resources</h1>
 
       <h2>Websites</h2>
       <ul>
-        <li>Web Development Multi-reddit</li>
-        <li>HN</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <LinkListItem href="https://www.reddit.com/r/HTML+Web_Development+WebdevTutorials+css+html5+javascript+learnjavascript+learnreactjs+learnwebdev+node+reactjs+typescript+web_design+webdev/" text="Web Development Multi-reddit" />
+        <LinkListItem href="https://news.ycombinator.com/front" text="HackerNews" />
       </ul>
 
       <h2>Books</h2>
       <ul>
-        <li></li>
+        <LinkListItem href="https://www.patterns.dev/" text="Patterns" />
+        <LinkListItem href="https://justjavascript.com/" text="Just JavaScript" />
+        <LinkListItem href="https://javascript.info/" text="The Modern JavaScript Tutorial" />
       </ul>
 
       <h2>Podcasts</h2>
       <ul>
-        <li>Hard Skills</li>
+        <li><h3>Technical</h3></li>
           <ul>
-            <li>single-threaded: a software developer podcast by Jenn Creighton</li>
-            <li>Syntax - Tasty Web Development Treats by Wes Bos & Scott Tolinski</li>
-            <li>JS Party: JavaScript, CSS, Web Development by Changelog Media</li>
-            <li>Front End Happy Hour by Ryan Burgess</li>
-            <li>JavaScript Jabber by Top End Devs</li>
-            <li>Shop Talk by Dave Rupert and Chris Coyier</li>
-            <li>Tech Load Journal by Henry Suryawirawan</li>
-            <li>The Stack Overflow Podcast by Stack Overflow</li>
-            <li>Thoughtworks Technology Podcast by Thoughtworks</li>
-            <li>The Changelog: Software Development, Opensource by Changelog Media</li>
+            <LinkListItem href="https://syntax.fm/" text="Syntax - Tasty Web Development Treats by Wes Bos & Scott Tolinski" />
+            <LinkListItem href="https://changelog.com/jsparty" text="JS Party: JavaScript, CSS, Web Development by Changelog Media" />
+            <LinkListItem href="https://topenddevs.com/podcasts/javascript-jabber" text="JavaScript Jabber by Top End Devs" />
+            <LinkListItem href="https://shoptalkshow.com/about/" text="Shop Talk by Dave Rupert and Chris Coyier" />
+            <LinkListItem href="https://changelog.com/podcast" text="The Changelog: Software Development, Opensource by Changelog Media" />
           </ul>
-        <li>Soft Skills</li>
+        <li><h3>Industry</h3></li>
           <ul>
-            <li>Manager Tools by Manager Tools</li>
-            <li>Career Tools by Manager Tools</li>
-            <li>Masters of Scale by Reid Hoffman</li>
-            <li>Engineering Culture by InfoQ</li>
-            <li>Mostly Mistakes by Jono Grayson & Dave Amadi</li>
+            <LinkListItem href="https://www.frontendhappyhour.com/" text="Front End Happy Hour by Ryan Burgess" />
+            <LinkListItem href="https://techleadjournal.dev/" text="Tech Lead Journal by Henry Suryawirawan" />
+            <LinkListItem href="https://www.thoughtworks.com/en-us/insights/podcasts/technology-podcasts" text="Thoughtworks Technology Podcast by Thoughtworks" />
+            <LinkListItem href="https://stackoverflow.blog/podcast/" text="The Stack Overflow Podcast by Stack Overflow" />
+            <LinkListItem href="https://www.infoq.com/engineering-culture-podcast/" text="Engineering Culture by InfoQ" />
           </ul>
       </ul>
     </MainPageLayout>

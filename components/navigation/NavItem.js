@@ -3,7 +3,7 @@ import Text from '@nextui-org/react/text';
 import { styled } from '@compiled/react';
 
 const Anchor = styled.a`
-  height: 50px;
+  height: 4rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -54,6 +54,24 @@ const Anchor = styled.a`
     }
 `;
 
+const ButtonText = styled(Text)`
+  color: ${(props) => props.color};
+  font-size: 1.75rem;
+  font-weight: bold;
+  
+  @media (max-width: 830px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+`;
+
 export default function NavItem({
   pageName,
   href = '',
@@ -65,11 +83,11 @@ export default function NavItem({
   if (disabled) {
     return (
       <Anchor isDark={isDark} colors={theme.colors} selected={false} disabled>
-        <Text size="large" weight={'bold'} css={{
-          color: theme.colors.gray600.value,
-        }}>
+        <ButtonText
+          color={theme.colors.gray600.value}
+        >
           {pageName}
-        </Text>
+        </ButtonText>
       </Anchor>
     )
   }
@@ -79,11 +97,11 @@ export default function NavItem({
   return (
     <NextLink href={_href} passHref>
       <Anchor isDark={isDark} colors={theme.colors} selected={_selected}>
-        <Text size="large" weight={'bold'} css={{
-          color: _selected ? theme.colors.white.value : isDark ? theme.colors.white.value : theme.colors.black.value,
-        }}>
+        <ButtonText
+          color={_selected ? theme.colors.white.value : isDark ? theme.colors.white.value : theme.colors.black.value}
+        >
           {pageName}
-        </Text>
+        </ButtonText>
       </Anchor>
     </NextLink>
   );

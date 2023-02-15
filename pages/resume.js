@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { styled } from '@compiled/react';
-import { Link } from '@nextui-org/react';
+import {Link, Text} from '@nextui-org/react';
 
 import MainPageLayout from '../components/MainPageLayout';
 
-const ResumeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+const ResumeWrapper = styled.div` 
+  height: 95%;
+  margin: -50px auto 0;
+  text-align: -webkit-center;
+  width: -webkit-fill-available;
 `;
 
 export default function Resume() {
@@ -20,7 +21,7 @@ export default function Resume() {
   }, [])
 
   return (
-    <MainPageLayout title={'Resume'}>
+    <MainPageLayout title={'Resume'} hasFooter={false}>
       <ResumeWrapper>
         <Link
           href="https://docs.google.com/document/d/e/2PACX-1vRWx-mmx3AcIrEa3s0imdcs9_31JORqMvY9jgWTf36augRqABWYeV1c0pSk21BYewM_eoOOB7SVQ7CQ/pub?embedded=true"
@@ -31,12 +32,20 @@ export default function Resume() {
             fontSize: '2rem',
           }}
         >
-          Resume
+            Résumé
         </Link>
+        <Text
+            css={{
+              display: !resumeVisible && showFallback ? 'block' : 'none',
+              fontSize: '1rem',
+            }}
+        >
+          Embedded résumé not available on Mobile
+        </Text>
         <div css={{
           visibility: resumeVisible ? 'block' : 'hidden',
           maxWidth: resumeVisible ? "950px" : '0',
-          height: '90%',
+          height: '100%',
         }}>
           <iframe
             src="https://docs.google.com/document/d/e/2PACX-1vRWx-mmx3AcIrEa3s0imdcs9_31JORqMvY9jgWTf36augRqABWYeV1c0pSk21BYewM_eoOOB7SVQ7CQ/pub?embedded=true"
