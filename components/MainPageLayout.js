@@ -20,9 +20,22 @@ const Footer = styled.footer`
   }
 `;
 
+const Main = styled.main`
+  margin: 100px 5vw 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: center;
+  
+  @media (max-width: 550px) {
+    margin: 50px 5vw 0;
+  }
+`;
+
 export default function MainPageLayout({
   title,
   children,
+  hasFooter = true,
 }) {
   const [a11yEnabled, toggleA11y] = useState(false);
 
@@ -48,24 +61,18 @@ export default function MainPageLayout({
             <>
               <NavItem pageName={'About'} {...props} />
               <NavItem href={'blog'} pageName={'Blog'} {...props} disabled />
-              <NavItem href={'contact'} pageName={'Contact'} {...props} />
-              <NavItem href={'resources'} pageName={'Resources'} {...props} disabled />
+              {/*<NavItem href={'contact'} pageName={'Contact'} {...props} />*/}
+              <NavItem href={'resources'} pageName={'Resources'} {...props} />
               <NavItem href={'resume'} pageName={'Resume'} {...props} />
             </>
           )}
         </NavBar>
 
-        <main css={{
-          margin: '100px 5vw 0',
-          display: 'flex',
-          flex: '1',
-          flexDirection: 'column',
-          alignContent: 'center',
-        }}>
+        <Main>
           {children}
-        </main>
+        </Main>
 
-        <Footer />
+        {hasFooter && <Footer />}
       </A11yContext.Provider>
     </div>
   );
