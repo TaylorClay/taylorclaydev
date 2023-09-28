@@ -24,7 +24,7 @@ export function Footer() {
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/stack">Stack</NavLink>
                 <NavLink href="/pique">Pique</NavLink>
-                <NavLink href="/wares">Wares</NavLink>
+                <NavLink href="/ware">Ware</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} Taylor Clay. All rights

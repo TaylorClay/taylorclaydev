@@ -4,9 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  LinkedInIcon,
-} from '@/components/SocialIcons'
+import { LinkedInIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -41,7 +39,7 @@ export default function About() {
         <title>About - Taylor Clay</title>
         <meta
           name="description"
-          content="I’m Taylor Clay. I live in New York City, where I design the future."
+          content="I’m Taylor Clay, a high-impact, fully remote software engineer."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -62,37 +60,48 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                As a frontend software engineer, my interests are in what you might
-                call the "back of the frontend." Designing robust API contracts, optimizing
-                web performance, and architecting large features are my particular areas of
-                expertise. While I necessarily need to handle render code, my real enthusiasm
-                is reserved for these more foundational aspects of frontend development.
+                As a frontend software engineer, my interests are in what you
+                might call the &quot;back of the frontend.&quot; Designing
+                robust API contracts, optimizing web performance, and
+                architecting large features are my particular areas of
+                expertise. While I necessarily need to handle render code, my
+                real enthusiasm is reserved for these more foundational aspects
+                of frontend development.
               </p>
               <p>
-                In my professional approach, I prioritize business outcomes. This certainly
-                originates from my interest in small businesses and entrepreneurial
-                endeavors. For me, technical decisions are never isolated from business
-                objectives; rather, they are integral to achieving those goals. Within the tech
-                stack, I'm especially fond of the React ecosystem and have a strong affinity
-                for Next.js. Its capabilities align well with my desire to produce work that is
-                both technically excellent and beneficial from a business perspective.
+                In my professional approach, I prioritize business outcomes.
+                This certainly originates from my interest in small businesses
+                and entrepreneurial endeavors. For me, technical decisions are
+                never isolated from business objectives; rather, they are
+                integral to achieving those goals. Within the tech stack,
+                I&apos;m especially fond of the React ecosystem and have a
+                strong affinity for Next.js. Its capabilities align well with my
+                desire to produce work that is both technically excellent and
+                beneficial from a business perspective.
               </p>
               <p>
-                Beyond my primary role, I identify as an indie hacker, managing a few side
-                business projects in my spare time. Leveraging the same tech stack across all my
-                ventures has streamlined my workflow considerably. Outside the tech arena, my
-                interests also include real estate investment, both personally and as a limited
-                partner. This offers a refreshing counterbalance to my day-to-day work and provides
-                a different kind of challenge that I find highly stimulating.
+                Beyond my primary role, I identify as an indie hacker, managing
+                a few side business projects in my spare time. Leveraging the
+                same tech stack across all my ventures has streamlined my
+                workflow considerably. Outside the tech arena, my interests also
+                include real estate investment, both personally and as a limited
+                partner. This offers a refreshing counterbalance to my
+                day-to-day work and provides a different kind of challenge that
+                I find highly stimulating.
               </p>
               <p>
-                If this sounds like it was written by ChatGPT, that's because it was.
+                If this sounds like it was written by ChatGPT, that&apos;s
+                because it was.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="https://www.linkedin.com/in/taylor-clay/" icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href="https://www.linkedin.com/in/taylor-clay/"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 LinkedIn
               </SocialLink>
               <SocialLink

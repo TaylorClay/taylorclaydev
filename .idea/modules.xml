@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../rebellion/.idea/rebellion.iml" filepath="$PROJECT_DIR$/../rebellion/.idea/rebellion.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/taylorclaydev.iml" filepath="$PROJECT_DIR$/.idea/taylorclaydev.iml" />
-    </modules>
-  </component>
-</project>

@@ -6,5 +6,6 @@ module.exports = {
       "play-lh.googleusercontent.com",
       "images.unsplash.com",
     ],
+    unoptimized: true,
   },
 };

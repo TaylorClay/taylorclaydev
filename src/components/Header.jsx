@@ -124,7 +124,7 @@ function MobileNavigation(props) {
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/stack">Stack</MobileNavItem>
                 <MobileNavItem href="/pique">Pique</MobileNavItem>
-                <MobileNavItem href="/wares">Wares</MobileNavItem>
+                <MobileNavItem href="/ware">Ware</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
