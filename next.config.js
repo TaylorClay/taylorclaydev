@@ -1,10 +1,10 @@
 module.exports = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.js$/,
-      use: ['@compiled/webpack-loader'],
-    });
-
-    return config;
+  images: {
+    domains: [
+      "m.media-amazon.com",
+      "is1-ssl.mzstatic.com",
+      "play-lh.googleusercontent.com",
+      "images.unsplash.com",
+    ],
   },
 };
